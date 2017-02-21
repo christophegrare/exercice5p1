@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>exercice 5 JS</title>
+</head>
+<body>
+  <form>
+    <label for="premier_nombre">Premier nombre : </label><input type="text" id="premier_nombre" name="premier_nombre" placeholder="Mettre un chiffre à virgule !"/><br/>
+    <label for="deuxieme_nombre">Deuxième nombre : </label><input type="text" id="deuxieme_nombre" name="deuxieme_nombre" placeholder="Mettre un chiffre à virgule !"/><br/>
+    <button  id="valider" name ="valider" onClick="check()">Valider</button>
+  </form>
+  <script>
+  /*Demander à l’utilisateur deux nombres à virgule. Ne garder que la partie entière du premier .
+  Les multiplier et afficher le résultat dans une boîte de dialogue. */
+  function check(){ //"check" se retrouve dans le html avec onClick
+  var first = document.getElementById('premier_nombre').value;
+  var second = document.getElementById('deuxieme_nombre').value;
+  if (isNaN(first) || isNaN(second)){ // si la valeur n'est pas un nombre tu fais : il faut des nombres
+  alert('Il faut des nombres');
+} else { //sinon tu me donne le resultat de la multiplication
+  var result = parseInt(first) * parseFloat(second);
+  alert(result);
+}
+};
+</script>
+</body>
+</html>
